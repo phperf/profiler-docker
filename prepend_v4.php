@@ -1,7 +1,5 @@
 <?php
 
-tideways_enable(TIDEWAYS_FLAGS_MEMORY | TIDEWAYS_FLAGS_CPU);
-
 register_shutdown_function(
     function () {
         register_shutdown_function(function () {
@@ -31,3 +29,6 @@ register_shutdown_function(
         });
     }
 );
+
+tideways_enable(TIDEWAYS_FLAGS_MEMORY | TIDEWAYS_FLAGS_CPU);
+
