@@ -11,8 +11,12 @@ RUN curl "https://github.com/tideways/php-profiler-extension/archive/v4.1.4.tar.
      cd .. && rm -rf ./a.tar.gz ./php-profiler-extension-4.1.4 && \
      docker-php-ext-enable tideways
 
+RUN apt-get update && apt-get install -y graphviz
+
 COPY ./prepend_v4.php /prepend.php
 
 COPY ./php.ini /usr/local/etc/php/
+
+COPY ./xhprof/xhprof_lib/utils /utils
 
 WORKDIR /code
