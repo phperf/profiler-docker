@@ -10,16 +10,34 @@ Profiling is started automatically with `auto_prepend_file` configuration.
 docker run --rm -v $(pwd):/code phperf/php-profiler php test_me.php
 ```
 
-After your script is finished `xhprof` report and SVG graph will be saved:
+You can also generate SVG call graph adding `SVG=1` ENV var (may take long time for big profiles)
+
 ```
-Nodes in report: 33
-Saving report to xhprof_report.1517989322.4259.serialized
-Generating dot script
-Generating dot image
-Saving graph to xhprof_report.1517989322.4259.serialized.svg
+docker run --rm -e SVG=1 -v $(pwd):/code phperf/php-profiler php test_me.php
 ```
 
-You can upload report to https://blackfire.io (cli tool needed) for analysis
+After your script is finished `xhprof` report and SVG graph will be saved:
+```
+Performance index: 0.00037335238456726
+Nodes in report: 33
+Saving report to xhprof_report.1518411787.448.serialized
+Generating dot script
+Generating dot image
+Saving graph to xhprof_report.1518411787.448.serialized.svg
+```
+
+You can analyze profiling report with [`xh-tool`](https://github.com/phperf/xh-tool)
+```
+xh-tool top xhprof_report.1518411787.448.serialized --limit 5 --strip-nesting
+name                           wallTime   wallTime%   wallTime1   ownTime    ownTime%   ownTime1   count
+PerformanceIndex::euler        1.22s      65.55       9.1us       1.22s      65.55      9.1us      135K 
+PerformanceIndex::measure      1.87s      99.94       1.87s       427.62ms   22.89      427.62ms   1    
+PerformanceIndex::checkParts   62.24ms    3.33        4.1us       62.24ms    3.33       4.1us      15K  
+md5                            43.53ms    2.33        4.4us       43.53ms    2.33       4.4us      10K  
+preg_match                     23.71ms    1.27        4.7us       23.71ms    1.27       4.7us      5K   
+```
+
+Or you can upload report to https://blackfire.io (`blackfire` cli tool needed) for analysis
 ```
 blackfire upload xhprof_report.1517989322.4259.serialized
 ```

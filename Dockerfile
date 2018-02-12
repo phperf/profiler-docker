@@ -19,4 +19,6 @@ COPY ./php.ini /usr/local/etc/php/
 
 COPY ./xhprof/xhprof_lib/utils /utils
 
+ENV SVG=$SVG
+
 WORKDIR /code
