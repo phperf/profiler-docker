@@ -1,0 +1,18 @@
+FROM php:5.6-cli
+
+RUN apt-get update && apt-get install -y graphviz && apt-get clean
+
+RUN pecl install xhprof-0.9.4 \
+ && docker-php-ext-enable xhprof
+
+COPY ./prepend_xhprof.php /prepend.php
+
+COPY ./php.ini /usr/local/etc/php/
+
+COPY ./xhprof/xhprof_lib/utils /utils
+
+ENV SVG=$SVG
+
+ENV REPORT=$REPORT
+
+WORKDIR /code

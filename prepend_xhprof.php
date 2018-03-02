@@ -3,7 +3,7 @@
 register_shutdown_function(
     function () {
         register_shutdown_function(function () {
-            $data = tideways_disable();
+            $data = xhprof_disable();
             echo 'Nodes in report: ' . count($data) . "\n";
             $name = getenv('REPORT');
             if (empty($name)) {
@@ -35,5 +35,5 @@ register_shutdown_function(
     }
 );
 
-tideways_enable(TIDEWAYS_FLAGS_MEMORY | TIDEWAYS_FLAGS_CPU);
+xhprof_enable(XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_CPU);
 

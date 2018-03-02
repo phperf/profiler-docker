@@ -17,6 +17,7 @@ docker run --rm -e SVG=1 -v $(pwd):/code phperf/php-profiler php test_me.php
 ```
 
 After your script is finished `xhprof` report and SVG graph will be saved:
+
 ```
 Performance index: 0.00037335238456726
 Nodes in report: 33
@@ -27,6 +28,7 @@ Saving graph to xhprof_report.1518411787.448.serialized.svg
 ```
 
 You can analyze profiling report with [`xh-tool`](https://github.com/phperf/xh-tool)
+
 ```
 xh-tool top xhprof_report.1518411787.448.serialized --limit 5 --strip-nesting
 name                           wallTime   wallTime%   wallTime1   ownTime    ownTime%   ownTime1   count
@@ -38,6 +40,7 @@ preg_match                     23.71ms    1.27        4.7us       23.71ms    1.2
 ```
 
 Or you can upload report to https://blackfire.io (`blackfire` cli tool needed) for analysis
+
 ```
 blackfire upload xhprof_report.1517989322.4259.serialized
 ```
@@ -54,4 +57,12 @@ I/O Time     5.31ms
 Memory       47.4KB
 Network         n/a     n/a       -
 SQL             n/a       -
+```
+
+If you want to save profile data to a particular file, you can provide it with `REPORT=<name>`, you can use `JSON` format if name ends with `.json`
+
+```
+docker run --rm -e REPORT=rep.json -v $(pwd):/code phperf/php-profiler php t2.php
+Nodes in report: 12
+Saving report to rep.json
 ```
