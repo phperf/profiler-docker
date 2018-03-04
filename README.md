@@ -1,4 +1,4 @@
-# Dockerized command-line PHP 7 profiler (tideways)
+# Dockerized command-line PHP 7 profiler (XHPROF-compatible)
 
 Portable docker image with PHP 7.2 and `tideways` extension installed.
 
@@ -66,3 +66,9 @@ docker run --rm -e REPORT=rep.json -v $(pwd):/code phperf/php-profiler php t2.ph
 Nodes in report: 12
 Saving report to rep.json
 ```
+
+## Tags
+
+* `phperf/php-profiler:latest` PHP 7.2, tideways 4.1.5, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile)
+* `phperf/php-profiler:5.6-xhprof` PHP 5.6, xhprof 0.9.4, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.xhprof_php56)
+* `phperf/php-profiler:5.6-uprofiler` PHP 5.6, uprofiler, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.uprofiler_php56)

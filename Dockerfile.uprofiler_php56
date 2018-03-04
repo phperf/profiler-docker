@@ -1,0 +1,25 @@
+FROM php:5.6-cli
+
+RUN apt-get update && apt-get install -y graphviz && apt-get clean
+
+COPY ./uprofiler/extension /extension
+
+RUN cd /extension && \
+     phpize && \
+     ./configure && \
+     make && \
+     make install && \
+     rm -rf /extension && \
+     docker-php-ext-enable uprofiler
+
+COPY ./prepend_uprofiler.php /prepend.php
+
+COPY ./php.ini /usr/local/etc/php/
+
+COPY ./xhprof/xhprof_lib/utils /utils
+
+ENV SVG=$SVG
+
+ENV REPORT=$REPORT
+
+WORKDIR /code

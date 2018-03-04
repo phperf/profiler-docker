@@ -4,8 +4,14 @@ build:
 push:
 	docker push phperf/php-profiler:latest
 
-build56:
+build-xhprof:
 	docker build -t phperf/php-profiler:5.6-xhprof -f Dockerfile.xhprof_php56 .
 
-push56:
+build-uprofiler:
+	docker build -t phperf/php-profiler:5.6-uprofiler -f Dockerfile.uprofiler_php56 .
+
+push-xhprof:
 	docker push phperf/php-profiler:5.6-xhprof
+
+push-uprofiler:
+	docker push phperf/php-profiler:5.6-uprofiler

@@ -1,3 +1,6 @@
 [submodule "xhprof"]
 	path = xhprof
 	url = https://github.com/phacility/xhprof.git
+[submodule "uprofiler"]
+	path = uprofiler
+	url = https://github.com/FriendsOfPHP/uprofiler
