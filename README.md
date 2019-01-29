@@ -1,6 +1,6 @@
 # Dockerized command-line PHP 7 profiler (XHPROF-compatible)
 
-Portable docker image with PHP 7.2 and `tideways` extension installed.
+Portable docker image with PHP 7.3 and `tideways` extension installed.
 
 Profiling is started automatically with `auto_prepend_file` configuration.
 
@@ -69,8 +69,10 @@ Saving report to rep.json
 
 ## Tags
 
-* `phperf/php-profiler:latest` PHP 7.2, tideways 4.1.5, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile)
-* `phperf/php-profiler:7.2-tideways-v4` PHP 7.2, tideways 4.1.5, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile)
-* `phperf/php-profiler:7.2-tideways-v5` PHP 7.2, tideways 5.0-beta2, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.v5)
+* `phperf/php-profiler:latest` PHP 7.3, tideways 4.1.7, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.tideways_v4_php73)
+* `phperf/php-profiler:7.3-tideways-v4` PHP 7.3, tideways 4.1.7, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.tideways_v4_php73)
+* `phperf/php-profiler:7.3-tideways-v5` PHP 7.3, tideways 5.0-beta3, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.tideways_v5_php73)
+* `phperf/php-profiler:7.2-tideways-v4` PHP 7.2, tideways 4.1.7, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.tideways_v4_php72)
+* `phperf/php-profiler:7.2-tideways-v5` PHP 7.2, tideways 5.0-beta3, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.tideways_v5_php72)
 * `phperf/php-profiler:5.6-xhprof` PHP 5.6, xhprof 0.9.4, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.xhprof_php56)
 * `phperf/php-profiler:5.6-uprofiler` PHP 5.6, uprofiler, [Dockerfile](https://github.com/phperf/profiler-docker/blob/master/Dockerfile.uprofiler_php56)
