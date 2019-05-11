@@ -4,6 +4,7 @@ register_shutdown_function(
     function () {
         register_shutdown_function(function () {
             $data = xhprof_disable();
+            echo "XHPROF: ", phpversion("xhprof"), ", PHP: ", phpversion(), "\n";
             echo 'Nodes in report: ' . count($data) . "\n";
             $name = getenv('REPORT');
             if (empty($name)) {
