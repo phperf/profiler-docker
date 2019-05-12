@@ -1,0 +1,100 @@
+{
+  "main()==>load::php_cpu.php": {
+    "ct": 1,
+    "wt": 85,
+    "cpu": 0,
+    "mu": 3456,
+    "pmu": 0
+  },
+  "nestedCPU@4==>nestedCPU@5": {
+    "ct": 1,
+    "wt": 8,
+    "cpu": 0,
+    "mu": 768,
+    "pmu": 0
+  },
+  "nestedCPU@3==>nestedCPU@4": {
+    "ct": 1,
+    "wt": 3617,
+    "cpu": 15625,
+    "mu": 2040,
+    "pmu": 0
+  },
+  "nestedCPU@2==>nestedCPU@3": {
+    "ct": 1,
+    "wt": 6869,
+    "cpu": 15625,
+    "mu": 3312,
+    "pmu": 0
+  },
+  "nestedCPU@1==>nestedCPU@2": {
+    "ct": 1,
+    "wt": 10197,
+    "cpu": 15625,
+    "mu": 4584,
+    "pmu": 0
+  },
+  "nestedCPU==>nestedCPU@1": {
+    "ct": 1,
+    "wt": 14148,
+    "cpu": 15625,
+    "mu": 5848,
+    "pmu": 0
+  },
+  "run_init::code\/php_cpu.php==>nestedCPU": {
+    "ct": 1,
+    "wt": 18268,
+    "cpu": 31250,
+    "mu": 7136,
+    "pmu": 0
+  },
+  "main()==>run_init::code\/php_cpu.php": {
+    "ct": 1,
+    "wt": 18273,
+    "cpu": 31250,
+    "mu": 8448,
+    "pmu": 0
+  },
+  "{closure}::\/prepend.php\/4-36==>register_shutdown_function": {
+    "ct": 1,
+    "wt": 5,
+    "cpu": 0,
+    "mu": 1032,
+    "pmu": 0
+  },
+  "main()==>{closure}::\/prepend.php\/4-36": {
+    "ct": 1,
+    "wt": 11,
+    "cpu": 0,
+    "mu": 2504,
+    "pmu": 0
+  },
+  "{closure}::\/prepend.php\/5-35==>phpversion": {
+    "ct": 2,
+    "wt": 4,
+    "cpu": 0,
+    "mu": 848,
+    "pmu": 0
+  },
+  "{closure}::\/prepend.php\/5-35==>uprofiler_disable": {
+    "ct": 1,
+    "wt": 0,
+    "cpu": 0,
+    "mu": 792,
+    "pmu": 0
+  },
+  "main()==>{closure}::\/prepend.php\/5-35": {
+    "ct": 1,
+    "wt": 51,
+    "cpu": 0,
+    "mu": 3024,
+    "pmu": 968
+  },
+  "main()": {
+    "ct": 1,
+    "wt": 18482,
+    "cpu": 31250,
+    "mu": 17752,
+    "pmu": 1904
+  }
+}

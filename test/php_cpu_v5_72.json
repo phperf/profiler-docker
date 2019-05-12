@@ -1,0 +1,72 @@
+{
+  "main()==>{closure}": {
+    "ct": 1,
+    "wt": 5,
+    "cpu": 0,
+    "mu": 608,
+    "pmu": 0
+  },
+  "{closure}==>tideways_xhprof_disable": {
+    "ct": 1,
+    "wt": 2,
+    "cpu": 0,
+    "mu": 128,
+    "pmu": 0
+  },
+  "nestedCPU@2==>nestedCPU@3": {
+    "ct": 1,
+    "wt": 2341,
+    "cpu": 0,
+    "mu": 576,
+    "pmu": 0
+  },
+  "nestedCPU@1==>nestedCPU@2": {
+    "ct": 1,
+    "wt": 3509,
+    "cpu": 0,
+    "mu": 800,
+    "pmu": 0
+  },
+  "main()": {
+    "ct": 1,
+    "wt": 6017,
+    "cpu": 15625,
+    "mu": 2840,
+    "pmu": 0
+  },
+  "nestedCPU==>nestedCPU@1": {
+    "ct": 1,
+    "wt": 4699,
+    "cpu": 15625,
+    "mu": 1024,
+    "pmu": 0
+  },
+  "nestedCPU@4==>nestedCPU@5": {
+    "ct": 1,
+    "wt": 1,
+    "cpu": 0,
+    "mu": 128,
+    "pmu": 0
+  },
+  "main()==>nestedCPU": {
+    "ct": 1,
+    "wt": 5896,
+    "cpu": 15625,
+    "mu": 1248,
+    "pmu": 0
+  },
+  "{closure}==>register_shutdown_function": {
+    "ct": 1,
+    "wt": 2,
+    "cpu": 0,
+    "mu": 160,
+    "pmu": 0
+  },
+  "nestedCPU@3==>nestedCPU@4": {
+    "ct": 1,
+    "wt": 1174,
+    "cpu": 0,
+    "mu": 352,
+    "pmu": 0
+  }
+}

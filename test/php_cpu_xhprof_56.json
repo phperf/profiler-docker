@@ -1,0 +1,86 @@
+{
+  "main()==>load::php_cpu.php": {
+    "ct": 1,
+    "wt": 215,
+    "cpu": 0,
+    "mu": 3448,
+    "pmu": 0
+  },
+  "nestedCPU@4==>nestedCPU@5": {
+    "ct": 1,
+    "wt": 6,
+    "cpu": 0,
+    "mu": 768,
+    "pmu": 0
+  },
+  "nestedCPU@3==>nestedCPU@4": {
+    "ct": 1,
+    "wt": 3541,
+    "cpu": 15625,
+    "mu": 1840,
+    "pmu": 0
+  },
+  "nestedCPU@2==>nestedCPU@3": {
+    "ct": 1,
+    "wt": 6861,
+    "cpu": 15625,
+    "mu": 2896,
+    "pmu": 0
+  },
+  "nestedCPU@1==>nestedCPU@2": {
+    "ct": 1,
+    "wt": 10278,
+    "cpu": 15625,
+    "mu": 3952,
+    "pmu": 0
+  },
+  "nestedCPU==>nestedCPU@1": {
+    "ct": 1,
+    "wt": 13726,
+    "cpu": 15625,
+    "mu": 5000,
+    "pmu": 0
+  },
+  "???_op==>nestedCPU": {
+    "ct": 1,
+    "wt": 22886,
+    "cpu": 31250,
+    "mu": 6048,
+    "pmu": 0
+  },
+  "main()==>???_op": {
+    "ct": 1,
+    "wt": 22893,
+    "cpu": 31250,
+    "mu": 7120,
+    "pmu": 0
+  },
+  "{closure}==>register_shutdown_function": {
+    "ct": 1,
+    "wt": 1,
+    "cpu": 0,
+    "mu": 1016,
+    "pmu": 0
+  },
+  "main()==>{closure}": {
+    "ct": 2,
+    "wt": 8,
+    "cpu": 0,
+    "mu": 3632,
+    "pmu": 0
+  },
+  "{closure}==>xhprof_disable": {
+    "ct": 1,
+    "wt": 0,
+    "cpu": 0,
+    "mu": 792,
+    "pmu": 0
+  },
+  "main()": {
+    "ct": 1,
+    "wt": 23229,
+    "cpu": 31250,
+    "mu": 14048,
+    "pmu": 0
+  }
+}
