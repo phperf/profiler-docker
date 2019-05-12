@@ -3,6 +3,7 @@
 register_shutdown_function(
     function () {
         register_shutdown_function(function () {
+            echo "Uprofiler: ", phpversion("uprofiler"), ", PHP: ", phpversion(), "\n";
             $data = uprofiler_disable();
             echo 'Nodes in report: ' . count($data) . "\n";
             $name = getenv('REPORT');

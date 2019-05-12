@@ -4,6 +4,7 @@ register_shutdown_function(
     function () {
         register_shutdown_function(function () {
             $data = tideways_xhprof_disable();
+            echo "TidewaysXHPROF: ", phpversion("tideways_xhprof"), ", PHP: ", phpversion(), "\n";
             echo 'Nodes in report: ' . count($data) . "\n";
             $name = getenv('REPORT');
             if (empty($name)) {
