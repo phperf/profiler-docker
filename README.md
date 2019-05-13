@@ -2,6 +2,7 @@
 
 [![Docker Stars](https://img.shields.io/docker/stars/phperf/php-profiler.svg)](https://hub.docker.com/r/phperf/php-profiler)
 [![Docker Pulls](https://img.shields.io/docker/pulls/phperf/php-profiler.svg)](https://hub.docker.com/r/phperf/php-profiler)
+[![Image Size](https://images.microbadger.com/badges/image/phperf/php-profiler.svg)](https://microbadger.com/images/phperf/php-profiler)
 
 Portable docker image with PHP 7.3 and `tideways` extension installed.
 
