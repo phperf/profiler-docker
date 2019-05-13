@@ -1,7 +1,7 @@
 # Dockerized command-line PHP 7 profiler (XHPROF-compatible)
 
-![Docker Stars](https://img.shields.io/docker/stars/phperf/php-profiler.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/phperf/php-profiler.svg)
+[![Docker Stars](https://img.shields.io/docker/stars/phperf/php-profiler.svg)](https://hub.docker.com/r/phperf/php-profiler)
+[![Docker Pulls](https://img.shields.io/docker/pulls/phperf/php-profiler.svg)](https://hub.docker.com/r/phperf/php-profiler)
 
 Portable docker image with PHP 7.3 and `tideways` extension installed.
 
