@@ -1,5 +1,8 @@
 # Dockerized command-line PHP 7 profiler (XHPROF-compatible)
 
+![Docker Stars](https://img.shields.io/docker/stars/phperf/php-profiler.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/phperf/php-profiler.svg)
+
 Portable docker image with PHP 7.3 and `tideways` extension installed.
 
 Profiling is started automatically with `auto_prepend_file` configuration.
