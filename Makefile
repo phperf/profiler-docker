@@ -39,3 +39,6 @@ build-uprofiler:
 
 push-uprofiler:
 	docker push phperf/php-profiler:5.6-uprofiler
+
+deps:
+	git submodule init && git submodule update
