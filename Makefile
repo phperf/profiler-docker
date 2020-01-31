@@ -1,5 +1,5 @@
 build:
-	docker build -t phperf/php-profiler -f Dockerfile.tideways_v4_php73 .
+	docker build -t phperf/php-profiler -f Dockerfile.tideways_v5_php74 .
 
 push:
 	docker push phperf/php-profiler:latest
@@ -27,6 +27,12 @@ build-v5-73:
 
 push-v5-73:
 	docker push phperf/php-profiler:7.3-tideways-v5
+
+build-v5-74:
+	docker build -t phperf/php-profiler:7.4-tideways-v5 -f Dockerfile.tideways_v5_php74 .
+
+push-v5-74:
+	docker push phperf/php-profiler:7.4-tideways-v5
 
 build-xhprof:
 	docker build -t phperf/php-profiler:5.6-xhprof -f Dockerfile.xhprof_php56 .
